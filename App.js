@@ -1,23 +1,41 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, AppRegistry, Text, View, Image } from 'react-native';
+import Avatar from './app/components/Avatar';
+import Host from './app/components/Avatar/host.js';
+import UserRequest from './app/components/Avatar/userRequest.js';
+import BackgroundImage from './app/components/Avatar/backgroundImage.js';
+
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
+      <View>
+        
+        <BackgroundImage />
+        <Host />
+        <UserRequest />
+
       </View>
+
     );
   }
 }
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
+      backgroundImage: {
+        flex: 1,
+        width: null,
+        height: null,
+        resizeMode: 'cover',
+
+    }
 });
+
+      // <Image style = {styles.backgroundImage} source={require('./app/components/Avatar/images/brickwall.jpg')}>
+      // </Image>

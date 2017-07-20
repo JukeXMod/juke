@@ -1,15 +1,18 @@
 // this is where all the componenet stuff regaurding avatar will go
 
- import React, { Component } from 'react';
-import { AppRegistry, Text } from 'react-native';
+import React, { Component } from 'react';
+import { AppRegistry, Text, View } from 'react-native'; 
 
-export default class HelloWorldApp extends Component {
+
+export default class Avatar extends Component {
   render() {
     return (
+    	<View>
       <Text>Hello world!</Text>
+     	</View>
     );
   }
 }
 
 // skip this line if using Create React Native App
-AppRegistry.registerComponent('AwesomeProject', () => HelloWorldApp);
+AppRegistry.registerComponent('juke', () => HelloWorldApp);
