@@ -9,11 +9,8 @@ import UserRequest from './userRequest.js';
 export default class BackgroundImage extends Component {
   render() {
     return (
-        <Image style = {styles.backgroundImage} source={require('./images/brickwall.jpg')} resizeMode="cover">
-
-        <Host />
-        <UserRequest />
-
+        <Image style = {styles.backgroundImage} source={require('./images/brickwall.jpg')}>
+     
         </Image>
     );
   }
@@ -29,3 +26,8 @@ const styles = StyleSheet.create({
 
     }
 });
+
+
+
+// skip this line if using Create React Native App
+AppRegistry.registerComponent('juke', () => HelloWorldApp);

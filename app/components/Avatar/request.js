@@ -19,7 +19,6 @@ export default class UserRequest extends Component {
 export const styled = StyleSheet.create({
   view: {
   	flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   }

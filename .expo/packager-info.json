@@ -1,8 +1,8 @@
 {
   "expoServerPort": 19000,
-  "packagerPort": 19002,
-  "packagerPid": 5631,
+  "packagerPort": 19001,
+  "packagerPid": 7413,
   "expoServerNgrokUrl": "https://gh-pnu.noahking27.juke.exp.direct",
   "packagerNgrokUrl": "https://packager.gh-pnu.noahking27.juke.exp.direct",
-  "ngrokPid": 5653
+  "ngrokPid": 7435
 }

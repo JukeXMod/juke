@@ -10,7 +10,7 @@ export default class UserRequest extends Component {
     return (
     	<View style = {styles.view}>
       <Text style = {styles.request}> Request </Text>
-      <Button style = {styles.button}> <Image style = {styles.turntable} source={require('./images/turntable.jpg')} resizeMode="contain"/>
+      <Button style = {styles.button}> <Image style = {styles.turntable} source={require('./images/vinyl2.png')} resizeMode="contain"/>
     </Button>
      	</View>
     );
@@ -20,27 +20,26 @@ export default class UserRequest extends Component {
 export const styles = StyleSheet.create({
   view: {
   	flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
   request: {
-    color: 'blue',
-    marginTop: 700,
-    fontSize: 30,
+    color: '#F0F3F4',
+    fontSize: 50,
+    fontWeight: 'bold',
   },
 
   button: {
-    marginTop:10,
+    marginTop:0,
   },
 
   turntable: {
-    marginTop: 200,
+    marginTop: 0,
     alignSelf: 'center',
     height: 150,
     width: 150,
-    borderWidth: 1,
-    borderRadius: 75,
+    marginBottom: 50,
+
   }
 });
 
