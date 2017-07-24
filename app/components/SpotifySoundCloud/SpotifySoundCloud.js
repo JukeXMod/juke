@@ -1,16 +1,16 @@
-// Client Queue Component
+// Spotify Soundcloud Image Buttons Component
 
 import React, { Component } from 'react';
 import { StyleSheet, AppRegistry, Text, View, Image } from 'react-native';
 import Button from 'react-native-button';
 
 
-export default class Queue extends Component {
+export default class SpotifySoundCloud extends Component {
   render() {
     return (
     	<View>
-   			<Button style = {styles.button}><Image style = {styles.soundCloud} source={require('./images/soundcloud.png')} /></Button>
-   			<Button style = {styles.button}><Image style = {styles.spotify} source={require('./images/spotify.png')} /></Button>
+   			<Button style = {styles.button}><Image style = {styles.soundCloud} source={require('../../images/soundcloud.png')} /></Button>
+   			<Button style = {styles.button}><Image style = {styles.spotify} source={require('../../images/spotify.png')} /></Button>
 
 
      	</View>
