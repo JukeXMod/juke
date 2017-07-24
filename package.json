@@ -5,7 +5,12 @@
   "devDependencies": {
     "react-native-scripts": "0.0.50",
     "jest-expo": "~18.0.0",
-    "react-test-renderer": "16.0.0-alpha.12"
+    "react-test-renderer": "16.0.0-alpha.12",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "nodemon": "^1.11.0"
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
@@ -13,16 +18,30 @@
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
-    "test": "node node_modules/jest/bin/jest.js --watch"
+    "test": "node node_modules/jest/bin/jest.js --watch",
+    "server": "nodemon server.js --exec babel-node --presets es2015,stage-2"
   },
   "jest": {
     "preset": "jest-expo"
   },
   "dependencies": {
+    "babel-loader": "^7.1.1",
+    "cookie-session": "^2.0.0-beta.2",
     "expo": "^18.0.3",
+<<<<<<< HEAD
     "react": "16.0.0-alpha.12",
     "react-native": "^0.45.1",
     "react-native-action-button": "^2.7.2",
     "react-native-button": "^2.1.0"
+=======
+    "express": "^4.15.3",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.1",
+    "passport-google-oauth20": "^1.0.0",
+    "passport-spotify": "^0.3.1",
+    "react": "^16.0.0-alpha.12",
+    "react-native": "^0.45.1",
+    "webpack": "^3.3.0"
+>>>>>>> 5f4741b0639bb331bde399b1ea57435746b35d58
   }
 }
