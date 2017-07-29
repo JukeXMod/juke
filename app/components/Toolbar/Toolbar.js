@@ -6,6 +6,8 @@ import {
   View,                // Container component
   AppRegistry
 } from 'react-native';
+import { StackNavigator } from 'react-navigation';
+
 
 export default class Toolbar extends Component {
 

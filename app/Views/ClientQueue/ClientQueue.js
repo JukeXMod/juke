@@ -2,10 +2,17 @@ import React from 'react';
 import { StyleSheet, Text, AppRegistry, View, Image, TouchableOpacity, FlatList } from 'react-native';
 // import SpotifySoundCloud from '../components/SpotifySoundCloud/SpotifySoundCloud.js';
 import Toolbar from '../../components/Toolbar/Toolbar.js';
+import { StackNavigator } from 'react-navigation';
+
 
 
 
 export default class ClientQueue extends React.Component {
+
+ static navigationOptions = {
+    title: 'TESTING NAVIGATION',
+  };
+
   render() {
     return (
       <Image style = {styles.container} source={require('../../images/jukebox-background.jpg')} resizeMode="cover">

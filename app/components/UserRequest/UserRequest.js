@@ -3,14 +3,17 @@
 import React, { Component } from 'react';
 import { StyleSheet, AppRegistry, Text, View, Image } from 'react-native';
 import Button from 'react-native-button';
+import { StackNavigator } from 'react-navigation';
 
 
 export default class UserRequest extends Component {
+
   render() {
     return (
     	<View style = {styles.view}>
       <Text style = {styles.request}> Request </Text>
-      <Button style = {styles.button}> <Image style = {styles.turntable} source={require('../../images/vinyl2.png')} resizeMode="contain"/>
+      <Button style = {styles.button} onPress={() => this.props.navigation.navigate('ClientQueue')}
+          title="TESTING NAVIGATE"> <Image style = {styles.turntable} source={require('../../images/vinyl2.png')} resizeMode="contain"/>
     </Button>
      	</View>
     );

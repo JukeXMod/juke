@@ -2,17 +2,19 @@ import React from 'react';
 import { StyleSheet, Text, AppRegistry, View, Image, TouchableOpacity, FlatList } from 'react-native';
 import Host from '../../components/Host/Host.js';
 import UserRequest from '../../components/UserRequest/UserRequest.js';
+import { StackNavigator } from 'react-navigation';
+
 
 
       export default class HostClient extends React.Component {
+        
   render() {
+
     return (
-      <Image style = {styles.container} source={require('../../images/jukebox-background.jpg')} resizeMode="cover">
+
         <View>
-          <Host />
-          <UserRequest />
+        <UserRequest navigate={this.props.navigation}/>
         </View>
-      </Image>
     );
   }
 }

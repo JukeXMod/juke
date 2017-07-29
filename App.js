@@ -1,5 +1,8 @@
+import * as Expo from 'expo';
 import React from 'react';
 import { StyleSheet, Text, AppRegistry, View, Image, TouchableOpacity, FlatList } from 'react-native';
+import { StackNavigator } from 'react-navigation';
+
 // import Avatar from './app/components/Avatar';
 // import Host from './app/components/Host/Host.js';
 // import UserRequest from './app/components/UserRequest/UserRequest.js';
@@ -8,28 +11,31 @@ import { StyleSheet, Text, AppRegistry, View, Image, TouchableOpacity, FlatList 
 // import SearchBarr from './app/components/Searchbar/Searchbar.js';
 import HostClient from './app/Views/HostClientView';
 import ClientQueue from './app/Views/ClientQueue';
+import SearchBarr from './app/components/Searchbar';
+
 
      export default class App extends React.Component {
+      static navigationOptions = {
+    title: 'Welcome',
+  };
+
   render() {
+    const { navigation } = this.props;
     return (
-      <Image style = {styles.container} source={require('./app/images/jukebox-background.jpg')} resizeMode="cover">
-        <View>
-         <ClientQueue />
-        </View>
-      </Image>
+      <HostClient navigation={navigation} />
+      
     );
   }
 }
 
-
+const SimpleApp = StackNavigator({
+  HostClient: { screen: HostClient },
+  ClientQueue: { screen: ClientQueue},
+});
 
 
 export const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+  
 container: {
 flex: 1,
 width: undefined,
@@ -41,17 +47,24 @@ alignItems: 'center',
 
 });
 
+//<Image style = {styles.container} source={require('./app/images/jukebox-background.jpg')} resizeMode="cover">
+        //<View>
+        //<HostClient />
+        //</View>
+      //</Image>
+
 
 // SEARCHBAR COMPONENT
-//       export default class App extends React.Component {
+//      export default class App extends React.Component {
 //   render() {
 //     return (
-//       <Image style = {styles.container} source={require('./app/components/Avatar/images/jukebox-background.jpg')} resizeMode="cover">
+//       <Image style = {styles.containerr} source={require('./app/images/jukebox-background.jpg')} resizeMode="contain">
 //         <View>
-//           <SearchBarr />
+//         <SearchBarr />
 //         </View>
 //       </Image>
 //     );
 //   }
-
-
+// }
+// skip this line if using Create React Native App
+AppRegistry.registerComponent('juke', () => HelloWorldApp);
