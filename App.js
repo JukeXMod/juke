@@ -1,6 +1,6 @@
 import * as Expo from 'expo';
 import React from 'react';
-import { StyleSheet, Text, AppRegistry, View, Image, TouchableOpacity, FlatList } from 'react-native';
+import { StyleSheet, Text, AppRegistry, View, Image, TouchableOpacity, FlatList, Button } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
 // import Avatar from './app/components/Avatar';
@@ -13,25 +13,35 @@ import HostClient from './app/Views/HostClientView';
 import ClientQueue from './app/Views/ClientQueue';
 import SearchBarr from './app/components/Searchbar';
 
+const AppNavigator = StackNavigator({
+  HostClientView: { screen: HostClient },
+  ClientQueueView: { screen: ClientQueue}
+});
 
      export default class App extends React.Component {
+
+      constructor (){
+        super();
+        console.warn("TEST NOAH");
+      }
       static navigationOptions = {
     title: 'Welcome',
   };
 
   render() {
-    const { navigation } = this.props;
     return (
-      <HostClient navigation={navigation} />
-      
+      <Image style = {styles.container} source={require('./app/images/jukebox-background.jpg')} resizeMode="cover">
+        <View>
+        <AppNavigator ref={nav => { this.navigator = nav; }} />
+        </View>
+      </Image>
     );
   }
 }
 
-const SimpleApp = StackNavigator({
-  HostClient: { screen: HostClient },
-  ClientQueue: { screen: ClientQueue},
-});
+
+
+
 
 
 export const styles = StyleSheet.create({
@@ -47,12 +57,8 @@ alignItems: 'center',
 
 });
 
-//<Image style = {styles.container} source={require('./app/images/jukebox-background.jpg')} resizeMode="cover">
-        //<View>
-        //<HostClient />
-        //</View>
-      //</Image>
-
+// skip this line if using Create React Native App
+AppRegistry.registerComponent('juke', () => SimpleApp);
 
 // SEARCHBAR COMPONENT
 //      export default class App extends React.Component {
@@ -66,5 +72,4 @@ alignItems: 'center',
 //     );
 //   }
 // }
-// skip this line if using Create React Native App
-AppRegistry.registerComponent('juke', () => HelloWorldApp);
+

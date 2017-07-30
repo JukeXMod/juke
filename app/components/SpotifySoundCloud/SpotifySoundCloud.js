@@ -34,5 +34,3 @@ spotify: {
 
 
 
-// skip this line if using Create React Native App
-AppRegistry.registerComponent('juke', () => HelloWorldApp);

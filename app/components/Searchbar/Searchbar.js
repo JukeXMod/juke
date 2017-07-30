@@ -38,7 +38,6 @@ export default class SearchBarr extends Component {
 
 //   }
 
-  // skip this line if using Create React Native App
-AppRegistry.registerComponent('SearchBarr', () => HelloWorldApp);
+
 
 // SEARCH BAR STYLING style={{width: 250, height: 50, bottom: -10, paddingLeft: 125, fontWeight: "bold", fontSize: 20}}

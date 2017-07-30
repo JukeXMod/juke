@@ -8,13 +8,17 @@ import { StackNavigator } from 'react-navigation';
 
 export default class UserRequest extends Component {
 
+static navigationOptions = {
+      title: 'Noah Testing'
+    };
+
+
   render() {
     return (
-    	<View style = {styles.view}>
-      <Text style = {styles.request}> Request </Text>
-      <Button style = {styles.button} onPress={() => this.props.navigation.navigate('ClientQueue')}
-          title="TESTING NAVIGATE"> <Image style = {styles.turntable} source={require('../../images/vinyl2.png')} resizeMode="contain"/>
-    </Button>
+    	<View >
+      <Text > Request </Text>
+      <Button> <Image style = {styles.turntable} source={require('../../images/vinyl2.png')} resizeMode="contain"/>
+        </Button>
      	</View>
     );
   }
@@ -47,5 +51,3 @@ export const styles = StyleSheet.create({
 });
 
 
-// skip this line if using Create React Native App
-AppRegistry.registerComponent('juke', () => HelloWorldApp);

@@ -9,10 +9,6 @@ import { StackNavigator } from 'react-navigation';
 
 export default class ClientQueue extends React.Component {
 
- static navigationOptions = {
-    title: 'TESTING NAVIGATION',
-  };
-
   render() {
     return (
       <Image style = {styles.container} source={require('../../images/jukebox-background.jpg')} resizeMode="cover">

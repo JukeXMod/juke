@@ -14,5 +14,3 @@ export default class Avatar extends Component {
   }
 }
 
-// skip this line if using Create React Native App
-AppRegistry.registerComponent('juke', () => HelloWorldApp);
